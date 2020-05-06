@@ -37,7 +37,13 @@
   "dependencies": {
     "async": "^2.1.5",
     "dbus": "^0.2.21",
-    "debug": "^2.1.1"
+    "debug": "^2.1.1",
+    "snyk": "^1.319.0"
   },
-  "main": "./lib/connman"
+  "main": "./lib/connman",
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
